@@ -13,7 +13,7 @@
             </div>
             <div class="content">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4" id="newAlerts">
                         <h5> Current Notifications</h5>
                         <div class="alert alert-info alert-with-icon alert alert-danger" data-notify="container">
                             <button type="button" aria-hidden="true" class="close">×</button>

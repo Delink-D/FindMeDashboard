@@ -81,4 +81,15 @@ $(document).ready(function() {
 
     });
 
+    const dbReff = firebase.database().ref().child("alerts");
+    
+    dbReff.on('value', snap => {numch
+        console.log("children count" + snap.numChildren());
+        // snap.forEach(function(child){
+        //     var key = child.key;
+        //     console.log("The updated post title is " + key);
+        //     // $("<p>Hi!</p>").appendTo("#newAlerts");
+        //     console.log("The updated post title is " + key);
+        // });
+    });
 });
