@@ -7,16 +7,13 @@ var fixedTop = false;
 var navbar_initialized = false;
 
 $(document).ready(function() {
-
     window_width = $(window).width();
 
     // check if there is an image set for the sidebar's background
     lbd.checkSidebarImage();
 
     // Init navigation toggle for small screens
-
-    if(window_width <= 991){
-
+    if (window_width <= 991) {
         lbd.initRightMenu();
     }
 
@@ -24,19 +21,6 @@ $(document).ready(function() {
     $('[rel="tooltip"]').tooltip();
 
     //      Activate the switches with icons
-
-    if($('.switch').length != 0){
-        $('.switch')['bootstrapSwitch']();
-    }
-    //      Activate regular switches
-    if($("[data-toggle='switch']").length != 0){
-         $("[data-toggle='switch']").wrap('<div class="switch" />').parent().bootstrapSwitch();
-    }
-
-    $('.form-control').on("focus", function(){
-        $(this).parent('.input-group').addClass("input-group-focus");
-    }).on("blur", function(){
-
     if ($('.switch').length != 0) {
         $('.switch')['bootstrapSwitch']();
     }
@@ -47,19 +31,11 @@ $(document).ready(function() {
 
     $('.form-control').on("focus", function() {
         $(this).parent('.input-group').addClass("input-group-focus");
-
+    }).on("blur", function() {
         $(this).parent(".input-group").removeClass("input-group-focus");
     });
 
     // Fixes sub-nav not working as expected on IOS
-
-$('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
-});
-
-// activate collapse right menu when the windows is resized
-$(window).resize(function(){
-    if($(window).width() <= 991){
-
     $('body').on('touchstart.dropdown', '.dropdown-menu', function(e) {
         e.stopPropagation();
     });
@@ -68,23 +44,11 @@ $(window).resize(function(){
 // activate collapse right menu when the windows is resized
 $(window).resize(function() {
     if ($(window).width() <= 991) {
-
         lbd.initRightMenu();
     }
 });
 
 lbd = {
-
-    misc:{
-        navbar_menu_visible: 0
-    },
-
-    checkSidebarImage: function(){
-        $sidebar = $('.sidebar');
-        image_src = $sidebar.data('image');
-
-        if(image_src !== undefined){
-
     misc: {
         navbar_menu_visible: 0
     },
@@ -94,18 +58,12 @@ lbd = {
         image_src = $sidebar.data('image');
 
         if (image_src !== undefined) {
-
             sidebar_container = '<div class="sidebar-background" style="background-image: url(' + image_src + ') "/>'
             $sidebar.append(sidebar_container);
         }
     },
-
-    initRightMenu: function(){
-         if(!navbar_initialized){
-
     initRightMenu: function() {
         if (!navbar_initialized) {
-
             $navbar = $('nav').find('.navbar-collapse').first().clone(true);
 
             $sidebar = $('.sidebar');
@@ -116,17 +74,10 @@ lbd = {
 
             ul_content = '';
 
-
-            $navbar.attr('data-color',sidebar_color);
-
-            //add the content from the regular header to the right menu
-            $navbar.children('ul').each(function(){
-
             $navbar.attr('data-color', sidebar_color);
 
             //add the content from the regular header to the right menu
             $navbar.children('ul').each(function() {
-
                 content_buff = $(this).html();
                 ul_content = ul_content + content_buff;
             });
@@ -137,16 +88,10 @@ lbd = {
 
 
             ul_content = '<div class="sidebar-wrapper">' +
-
-                            '<ul class="nav navbar-nav">' +
-                                ul_content +
-                            '</ul>' +
-
                 '<ul class="nav navbar-nav">' +
                 ul_content +
                 '</ul>' +
                 '</div>';
-
 
             navbar_content = logo_content + ul_content;
 
@@ -155,32 +100,6 @@ lbd = {
             $('body').append($navbar);
 
             background_image = $sidebar.data('image');
-
-            if(background_image != undefined){
-                $navbar.css('background',"url('" + background_image + "')")
-                       .removeAttr('data-nav-image')
-                       .addClass('has-image');
-            }
-
-
-             $toggle = $('.navbar-toggle');
-
-             $navbar.find('a').removeClass('btn btn-round btn-default');
-             $navbar.find('button').removeClass('btn-round btn-fill btn-info btn-primary btn-success btn-danger btn-warning btn-neutral');
-             $navbar.find('button').addClass('btn-simple btn-block');
-
-             $toggle.click(function (){
-                if(lbd.misc.navbar_menu_visible == 1) {
-                    $('html').removeClass('nav-open');
-                    lbd.misc.navbar_menu_visible = 0;
-                    $('#bodyClick').remove();
-                     setTimeout(function(){
-                        $toggle.removeClass('toggled');
-                     }, 400);
-
-                } else {
-                    setTimeout(function(){
-
             if (background_image != undefined) {
                 $navbar.css('background', "url('" + background_image + "')")
                     .removeAttr('data-nav-image')
@@ -205,7 +124,6 @@ lbd = {
 
                 } else {
                     setTimeout(function() {
-
                         $toggle.addClass('toggled');
                     }, 430);
 
@@ -214,15 +132,9 @@ lbd = {
                         $('html').removeClass('nav-open');
                         lbd.misc.navbar_menu_visible = 0;
                         $('#bodyClick').remove();
-
-                         setTimeout(function(){
-                            $toggle.removeClass('toggled');
-                         }, 400);
-
                         setTimeout(function() {
                             $toggle.removeClass('toggled');
                         }, 400);
-
                     });
 
                     $('html').addClass('nav-open');
@@ -243,19 +155,6 @@ lbd = {
 // leading edge, instead of the trailing.
 
 function debounce(func, wait, immediate) {
-
-	var timeout;
-	return function() {
-		var context = this, args = arguments;
-		clearTimeout(timeout);
-		timeout = setTimeout(function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		}, wait);
-		if (immediate && !timeout) func.apply(context, args);
-	};
-};
-
     var timeout;
     return function() {
         var context = this,
@@ -268,4 +167,3 @@ function debounce(func, wait, immediate) {
         if (immediate && !timeout) func.apply(context, args);
     };
 };
-
