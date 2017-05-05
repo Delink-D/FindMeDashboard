@@ -37,7 +37,14 @@
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACcZ-9IPN3H6v669GWEmRSq0P25-SqjJE&callback=initMap">
   </script>
 
+
+    <!-- findme Bootstrap Table Core javascript and methods for Demo purpose -->
 	<script src="assets/js/findme.js"></script>
+
+	<!-- findme Table DEMO methods, don't include it in your project! -->
+
+	<script src="assets/js/findme.js"></script>
+
 	<script src="assets/js/demo.js"></script>
 
     <script>
@@ -46,4 +53,4 @@
         });
     </script>
 
-</html>
+
