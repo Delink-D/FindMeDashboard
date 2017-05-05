@@ -1,4 +1,5 @@
 <?php 
+    error_reporting(0);
     // include header
     include 'header-nav.php';
 
@@ -106,6 +107,37 @@
                                     <div class="form-group">
                                         <label id="prof_em3name">User 3</label>
                                         <input disabled type="text" class="form-control" placeholder="Emagency 3" id="prof_em3">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+                            <h4>Insurance Details</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label id="prof_em1name">Medical Cover</label>
+                                        <input disabled type="text" class="form-control" placeholder="Emagency 1" id="prof_cover">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label id="prof_em2name">Policy Number</label>
+                                        <input disabled type="text" class="form-control" placeholder="Emagency 2" id="prof_policy">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label id="prof_em1name">Preffered Hospital</label>
+                                        <input disabled type="text" class="form-control" placeholder="Preffered Hospital" id="prof_hospital">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label id="prof_em2name">National Id</label>
+                                        <input disabled type="text" class="form-control" placeholder="National Id" id="prof_natid">
                                     </div>
                                 </div>
                             </div>
