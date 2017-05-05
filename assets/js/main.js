@@ -33,7 +33,7 @@ $(document).ready(function(){
 		if (firebaseUser) {
 			window.location.assign("dashboard.php");
 		}else {
-			console.log("Not Loged In");
+			console.log("You are not logged in");
 		}
 	});
 });

@@ -20,8 +20,6 @@ $(document).ready(function(){
 
 		$(".user_name").html(firebaseUser.displayName);
 		$(".user_email").html(firebaseUser.email);
-        $("#user_name")[0].placeholder = firebaseUser.displayName;
-        $("#user_email")[0].placeholder = firebaseUser.email;
 	});
 
 	// add new admin
@@ -81,6 +79,10 @@ $(document).ready(function(){
 		$("#prof_em3name").html(snap.val().emergencyContacts.emergencyContactNameThree);
 		$("#prof_em3")[0].placeholder = snap.val().emergencyContacts.emergencyContactNumberThree;
 
-	});
 
+		$("#prof_cover")[0].placeholder = snap.val().insuranceDetails.medCover;
+		$("#prof_policy")[0].placeholder = snap.val().insuranceDetails.policyNumber;
+		$("#prof_hospital")[0].placeholder = snap.val().insuranceDetails.prefHospital;
+		$("#prof_natid")[0].placeholder = snap.val().insuranceDetails.natId;
+	});
 });
