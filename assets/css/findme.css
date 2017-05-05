@@ -2,6 +2,7 @@
 #linkcolor{
   color:#1E90FF;
 }
+
 @keyframes spin {
   from {
     transform: rotate(0deg); }

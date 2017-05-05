@@ -3,28 +3,8 @@
                 <nav class="pull-left">
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="dashboard.php">
                                 Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Company
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                               Blog
                             </a>
                         </li>
                     </ul>
@@ -38,11 +18,9 @@
     </div>
 </div>
 
-
 </body>
 
-    <!--   Core JS Files   -->
-    <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+  <!--   Core JS Files   -->
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 
 	<!--  Checkbox, Radio & Switch Plugins -->
@@ -51,16 +29,22 @@
 	<!--  Charts Plugin -->
 	<script src="assets/js/chartist.min.js"></script>
 
-    <!--  Notifications Plugin    -->
-    <script src="assets/js/bootstrap-notify.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="assets/js/bootstrap-notify.js"></script>
 
     <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACcZ-9IPN3H6v669GWEmRSq0P25-SqjJE&callback=initMap">
+  </script>
+
 
     <!-- findme Bootstrap Table Core javascript and methods for Demo purpose -->
 	<script src="assets/js/findme.js"></script>
 
 	<!-- findme Table DEMO methods, don't include it in your project! -->
+
+	<script src="assets/js/findme.js"></script>
+
 	<script src="assets/js/demo.js"></script>
 
     <script>
@@ -70,4 +54,3 @@
     </script>
 
 
-</html>
